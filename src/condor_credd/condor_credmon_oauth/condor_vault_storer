@@ -121,12 +121,9 @@ for REQUEST; do
         IS_POMS_ANALYSIS=true
         VTOKEN="$UPLOADS/$POMS_VTOKEN"
     fi
-    
+
     if $IS_POMS_ANALYSIS; then
         BTOKEN="$BEARER_TOKEN_FILE"
-        if [ -z "$BEARER_TOKEN_FILE" ]; then
-            cp $BTOKEN $BTOKEN-$SERVICE
-        fi
     fi
 
     STOREOPTS=()
